@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container error 404">
+    <h2>Une erreur interne du serveur est survenue</h2>
+    <p>Nous avons rencontré un problème, nos équipes travaillent pour le résoudre au plus vite</p>
+</div>
+<div class="container px-5 py-5 text-center">
+    <div class="justify-content-center">       
+        <a class="btn fw-500 ms-lg-4 btn-primary px-10" href="{% url 'index' %}">
+            Home
+        </a>
+    </div>
+</div>
+{% endblock %}
+    
