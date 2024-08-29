@@ -47,7 +47,7 @@ jobs:
     
     - name: Check coverage
       run: |
-        pipenv run coverage report --fall-under=80
+        pipenv run coverage report --fail-under=80
       continue-on-error: false
 
 
