@@ -33,6 +33,10 @@ jobs:
     - name: Lint code with Flake8
       run: | 
         flake8 . --count --max-complexity=10 --max-line-length=99
+
+    - name: Set environment variable
+      run: |
+        echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> env
     
     - name: Run tests with coverage
       run: |
