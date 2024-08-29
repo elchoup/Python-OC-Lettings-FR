@@ -28,7 +28,7 @@ jobs:
     
     - name: Install dependencies
       run: |
-        pipenv install --deploy --dev
+        pipenv install --deploy --dev --system
     
     - name: Lint code with Flake8
       run: | 
