@@ -16,6 +16,6 @@ def index(request):
     return render(request, "index.html")
 
 
-def trigger_error():
+def trigger_error(request):
     """function to trigger the html page 500 Error"""
     division_by_zero = 1 / 0  # noqa: F841
