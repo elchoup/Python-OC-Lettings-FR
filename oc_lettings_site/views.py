@@ -18,4 +18,4 @@ def index(request):
 
 def trigger_error():
     """function to trigger the html page 500 Error"""
-    division_by_zero = 1 / 0
+    division_by_zero = 1 / 0  # noqa: F841
