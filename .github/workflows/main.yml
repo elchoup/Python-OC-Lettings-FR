@@ -72,7 +72,7 @@ jobs:
           context: .
           push: true
           tags: elchoup/oc_lettings_image:${{ github.sha }}
-          build-args: |
+          env: |
             SECRET_KEY=${{ secrets.SECRET_KEY }}
 
    
