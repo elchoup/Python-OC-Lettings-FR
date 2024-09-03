@@ -2,9 +2,6 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-ARG SECRET_KEY
-ENV SECRET_KEY=${SECRET_KEY}
-
 #Install pipenv
 
 RUN pip install pipenv
@@ -24,7 +21,7 @@ COPY . .
 
 # Collect statics
 
-RUN pipenv run python manage.py collectstatic --noinput
+RUN pipenv run python manage.py collectstatic --noinput --settings=oc_lettings_site.settings --key="${SECRET_KEY}"
 
 
 # Expose django default port
