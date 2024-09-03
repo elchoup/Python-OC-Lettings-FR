@@ -19,6 +19,10 @@ RUN pipenv install --system --deploy
 
 COPY . .
 
+# Collect statics
+
+RUN pipenv run python manage.py collectstatics --noinput
+
 
 # Expose django default port
 EXPOSE 8000
