@@ -13,7 +13,11 @@ COPY Pipfile Pipfile.lock ./
 
 # Install all dependencies without creating a venv
 
+RUN pip cache purge
+
 RUN pipenv install --system --deploy
+
+RUN pipenv run pip list
 
 # Copy all project content
 
