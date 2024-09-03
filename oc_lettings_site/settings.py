@@ -7,6 +7,8 @@ from dotenv import load_dotenv
 # Charge the file .env
 load_dotenv()
 
+print(f"Loaded SECRET_KEY: {os.getenv('SECRET_KEY')}")
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
