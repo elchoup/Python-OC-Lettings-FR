@@ -21,7 +21,7 @@ COPY . .
 
 # Collect statics
 
-RUN pipenv run python manage.py collectstatics --noinput
+RUN pipenv run python manage.py collectstatic --noinput
 
 
 # Expose django default port
