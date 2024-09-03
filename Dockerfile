@@ -15,13 +15,6 @@ COPY Pipfile Pipfile.lock ./
 
 RUN pipenv install --deploy
 
-
-# Set the SECRET_KEY environment variable
-
-ARG SECRET_KEY
-ENV SECRET_KEY=$SECRET_KEY
-
-
 # Copy all project content
 
 COPY . .
