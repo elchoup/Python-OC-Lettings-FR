@@ -12,6 +12,7 @@ python-dotenv = "*"
 sentry-sdk = "*"
 six = "*"
 gunicorn = "*"
+whitenoise = "*"
 
 [dev-packages]
 
