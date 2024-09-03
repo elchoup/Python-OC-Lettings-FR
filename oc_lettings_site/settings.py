@@ -19,7 +19,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 SENTRY_DSN = os.getenv("SENTRY_DSN")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 

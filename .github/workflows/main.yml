@@ -11,12 +11,12 @@ jobs:
 
     runs-on: ubuntu-latest
     
-    steps: 
+    steps:
     - name: Checkout code
       uses: actions/checkout@v4
     
     - name: Setup Python
-      uses: actions/setup-python@v3
+      uses: actions/setup-python@v5.1.1
     
       with:
         python-version: '3.11'
@@ -31,7 +31,7 @@ jobs:
         pipenv install --deploy --dev --system
     
     - name: Lint code with Flake8
-      run: | 
+      run: |
         flake8 . --count --max-complexity=10 --max-line-length=99
 
     - name: Set environment variable
@@ -41,7 +41,7 @@ jobs:
     - name: Run tests with coverage
       run: |
         pipenv run coverage run --source='.' manage.py test
-        pipenv run coverage report 
+        pipenv run coverage report
         pipenv run coverage xml
       continue-on-error: false
     
