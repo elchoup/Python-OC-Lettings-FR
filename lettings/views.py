@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Letting
 
 
@@ -32,7 +32,7 @@ Integer vehicula tincidunt enim, ac lacinia augue pulvinar sit amet."""
 def letting(request, letting_id):
     """Function to get the details of one letting with id and genrate
     the template with these details(context)"""
-    letting = Letting.objects.get(id=letting_id)
+    letting = get_object_or_404(Letting, id=letting_id)
     context = {
         "title": letting.title,
         "address": letting.address,
