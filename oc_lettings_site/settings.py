@@ -126,7 +126,7 @@ STATICFILES_DIRS = [
 ]
 
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-if "test" or "runserver" in sys.argv:
+if "test" in sys.argv or "runserver" in sys.argv:
     STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
 
 sentry_sdk.init(
