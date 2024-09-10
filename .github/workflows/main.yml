@@ -78,11 +78,7 @@ jobs:
 
       - name: Trigger Render deployment
         run: |
-          curl -X POST "https://api.render.com/v1/services/srv-crg1h4ij1k6c739atmqg/deploys" \
-          -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
-          -H "Content-Type: application/json" \
-          -d '{"clearCache": false}'
-
+          curl -X POST "https://api.render.com/deploy/srv-crg1h4ij1k6c739atmqg?key=7P0z_hY9-wM"
    
 
    
