@@ -28,7 +28,7 @@ jobs:
     
     - name: Install dependencies
       run: |
-        pipenv install --deploy --dev
+        pipenv install --deploy --dev --system
     
     - name: Lint code with Flake8
       run: |
@@ -74,6 +74,14 @@ jobs:
           tags: elchoup/oc_lettings_image:${{ github.sha }}
           build-args: |
             SECRET_KEY=${{ secrets.SECRET_KEY }}
+
+
+      - name: Trigger Render deployment
+        run: |
+          curl -X POST "https://api.render.com/v1/services/srv-crg1h4ij1k6c739atmqg/deploys" \
+          -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
+          -H "Content-Type: application/json" \
+          -d '{"clearCache": false}'
 
    
 
