@@ -14,7 +14,7 @@ sphinx:
   configuration: docs/source/conf.py
 
 formats:
-  - pdf
-  - epub
+  - "pdf"
+  - "epub"
 
-language: en
+language: "en"
