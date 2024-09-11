@@ -10,6 +10,7 @@ project = "oc_lettings"
 copyright = "2024, Matthieu"
 author = "Matthieu"
 release = "1.0.0"
+language = "en"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
