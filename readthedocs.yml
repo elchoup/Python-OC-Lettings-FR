@@ -13,4 +13,8 @@ python:
 sphinx:
   configuration: docs/source/conf.py
 
+formats:
+  - pdf
+  - epud
+
 language: "en"
