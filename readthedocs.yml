@@ -14,9 +14,4 @@ python:
 sphinx:
   configuration: docs/source/conf.py
 
-formats:
-  - html
-  - pdf
-  - epub
-
 language: en
