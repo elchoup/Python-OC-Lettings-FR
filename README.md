@@ -75,3 +75,18 @@ Utilisation de PowerShell, comme ci-dessus sauf :
 
 - Pour activer l'environnement virtuel, `.\venv\Scripts\Activate.ps1` 
 - Remplacer `which <my-command>` par `(Get-Command <my-command>).Path`
+
+
+### Variables d'environnement
+
+A la place du fichier .env_exemple crée un fichier .env comprenant le sentry dsn et la secret key
+
+
+### Déploiement
+
+L'application contient une pipeline ci/cd permettant une automatisation des tests et du déploiment. 
+Dans Github dans la partie settings/secrets and variables/actions les repos secrets suivants doivent être présent: DOCKER_PASSWORD(votre mdp docker), DOCKER_USERNAME(votre username docker) et la SECRET_KEY.
+Dans render dans la partie Environment variables la clef SENTRY_DSN doit également être présente.
+Sur toute les branches une partie automatisées de tests est effectuée à chaque push.
+Sur la branche main le deploiement automatique est activé. 
+Render récupère alors la dernière version de l'image docker pour déployer le site.
