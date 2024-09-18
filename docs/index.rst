@@ -23,4 +23,4 @@ documentation for details.
    database_structure
    use_guide
    deploy
-   programming interface
+   programming_interface
